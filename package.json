@@ -1,0 +1,21 @@
+{
+  "name": "rwieruch-modern-js-tutorial",
+  "version": "1.0.0",
+  "description": "Following Robin Wieruch's \"Modern JS Frontend\" tutorial series",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spaceninja/rwieruch-modern-js-tutorial.git"
+  },
+  "keywords": [],
+  "author": "Scott Vandehey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spaceninja/rwieruch-modern-js-tutorial/issues"
+  },
+  "homepage": "https://github.com/spaceninja/rwieruch-modern-js-tutorial#readme"
+}
