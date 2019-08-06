@@ -4,7 +4,7 @@
   "description": "Following Robin Wieruch's \"Modern JS Frontend\" tutorial series",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/spaceninja/rwieruch-modern-js-tutorial/issues"
   },
-  "homepage": "https://github.com/spaceninja/rwieruch-modern-js-tutorial#readme"
+  "homepage": "https://github.com/spaceninja/rwieruch-modern-js-tutorial#readme",
+  "devDependencies": {
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  }
 }
