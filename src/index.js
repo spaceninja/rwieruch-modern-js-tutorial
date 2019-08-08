@@ -1,8 +1,6 @@
 console.log("Hello Project.");
 
-const clickHandler = () => {
-  alert("Click!");
-};
+import clickHandler from "./clickHandler";
 
 const button = document.getElementById("js-click-me");
 button.addEventListener("click", clickHandler);

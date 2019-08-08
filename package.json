@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/spaceninja/rwieruch-modern-js-tutorial#readme",
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.7.2"
