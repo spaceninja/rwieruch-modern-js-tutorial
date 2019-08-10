@@ -1,5 +1,6 @@
 const clickHandler = () => {
-  alert("Click!");
+  // eslint-disable-next-line no-alert
+  alert('Click!');
 };
 
 export default clickHandler;
