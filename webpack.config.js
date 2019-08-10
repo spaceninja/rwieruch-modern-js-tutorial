@@ -3,6 +3,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  // use source maps
+  devtool: 'source-map',
   // Use the src/index.js file as entry point to bundle it.
   // If that file imports other JavaScript files, bundle them as well.
   entry: './src/index.js',
