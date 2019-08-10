@@ -1,10 +1,12 @@
 const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  // 1. Use the src/index.js file as entry point to bundle it.
-  //    If that file imports other JavaScript files, bundle them as well.
+  // Use the src/index.js file as entry point to bundle it.
+  // If that file imports other JavaScript files, bundle them as well.
   entry: './src/index.js',
-  // 2. Tell webpack to use babel-loader for JS files
+  // Tell webpack to use babel-loader for JS files
   module: {
     rules: [
       {
@@ -17,13 +19,22 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js'],
   },
-  // 3. Put the bundled source code in a bundle.js file in the /dist folder.
+  plugins: [
+    // Clear the `dist` folder before building
+    new CleanWebpackPlugin(),
+    // Generate HTML content
+    new HtmlWebpackPlugin({
+      title: 'Hello Webpack bundled JavaScript Project',
+      template: './src/index.html',
+    }),
+  ],
+  // Put the bundled source code in a bundle.js file in the /dist folder.
   output: {
-    path: path.resolve(__dirname, '/dist'),
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     filename: 'bundle.js',
   },
-  // 4. Serve our application to the browser from the /dist folder.
+  // Serve our application to the browser from the /dist folder.
   devServer: {
     contentBase: './dist',
   },
