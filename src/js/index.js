@@ -13,3 +13,6 @@ console.log(sum(2, 5));
 
 // eslint-disable-next-line no-console
 console.log(process.env.NODE_ENV);
+
+// load Sass
+import '../scss/index.scss';
