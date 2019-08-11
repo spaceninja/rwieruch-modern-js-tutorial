@@ -3,6 +3,7 @@ const sass = require('sass');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   entry: ['./src/js/index.js', './src/scss/index.scss'],
@@ -11,7 +12,7 @@ module.exports = {
       {
         test: /\.(js)$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: ['babel-loader', 'eslint-loader'],
       },
       {
         test: /\.(scss)$/,
@@ -75,6 +76,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'bundle.css',
     }),
+    new StyleLintPlugin(),
   ],
   output: {
     path: path.resolve(__dirname, '../', 'dist'),

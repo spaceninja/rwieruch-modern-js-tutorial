@@ -1,35 +1,36 @@
+// stylelint-disable declaration-colon-newline-after
 @font-face {
+  font-display: swap;
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: normal;
-  font-display: swap;
   src: url('../fonts/open-sans-v17-latin-regular.woff2'),
     url('../fonts/open-sans-v17-latin-regular.woff');
 }
 
 @font-face {
+  font-display: swap;
   font-family: 'Open Sans';
   font-style: italic;
   font-weight: normal;
-  font-display: swap;
   src: url('../fonts/open-sans-v17-latin-italic.woff2'),
     url('../fonts/open-sans-v17-latin-italic.woff');
 }
 
 @font-face {
+  font-display: swap;
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: bold;
-  font-display: swap;
   src: url('../fonts/open-sans-v17-latin-700.woff2'),
     url('../fonts/open-sans-v17-latin-700.woff');
 }
 
 @font-face {
+  font-display: swap;
   font-family: 'Open Sans';
   font-style: italic;
   font-weight: bold;
-  font-display: swap;
   src: url('../fonts/open-sans-v17-latin-700italic.woff2'),
     url('../fonts/open-sans-v17-latin-700italic.woff');
 }
