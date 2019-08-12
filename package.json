@@ -7,7 +7,13 @@
     "start": "webpack-dev-server --config build-utils/webpack.config.js --env.env=dev",
     "build": "webpack --config build-utils/webpack.config.js --env.env=prod",
     "build:analyze": "npm run build -- --env.addon=bundleanalyze --env.addon=bundlevisualizer",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "eslint '**/*.js'",
+    "lint:css": "stylelint '**/*.scss'",
+    "fix": "npm run fix:js && npm run fix:css",
+    "fix:js": "eslint --fix '**/*.js'",
+    "fix:css": "stylelint --fix '**/*.scss'",
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
