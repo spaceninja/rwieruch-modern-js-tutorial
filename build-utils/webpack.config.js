@@ -12,8 +12,5 @@ const getAddons = addonsArgs => {
 };
 
 module.exports = ({ env, addon }) => {
-  // eslint-disable-next-line global-require
-  const envConfig = require(`./webpack.${env}.js`);
-
-  return webpackMerge(commonConfig, envConfig, ...getAddons(addon));
+  return webpackMerge(commonConfig, { mode: env }, ...getAddons(addon));
 };
