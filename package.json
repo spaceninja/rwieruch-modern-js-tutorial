@@ -13,7 +13,7 @@
     "fix": "npm run fix:js && npm run fix:css",
     "fix:js": "eslint --fix '**/*.js'",
     "fix:css": "stylelint --fix '**/*.scss'",
-    "test": "npm run lint && jest"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
